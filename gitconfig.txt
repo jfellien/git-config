@@ -1,0 +1,29 @@
+[alias]
+	s = status
+	co = checkout
+	cm = commit -m
+	tree = log --graph --pretty=format:'%Cred%h%Creset %Cblue(%aN)%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr, %ar)%Creset' --abbrev-commit --date=short -n 32‏
+        rf = "!f() { git push origin :$1; git co master; git branch -D $1; }; f"
+[user]
+	name = Jan Fellien
+	email = jan.fellien@akelius.de
+[apply]
+	whitespace = nowarn
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
